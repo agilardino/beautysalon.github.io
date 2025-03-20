@@ -392,7 +392,7 @@ p
                 font-weight: 400
 
 #testimonio
-    padding-block: clamp(1.5rem, 3.5vw, 5rem)
+    padding-block: clamp(1.5em, 3.5vw, 3em)
     width: $seccion-width
     background-color: rgba(0, 0, 0, 1)
     display: flex
@@ -510,7 +510,7 @@ p
 /*** FOOTER ESTILOS ***/
 footer
     width: $seccion-width
-    padding-block: 5rem
+    padding-block: 4rem
     background: $blanco
     img
         width: 280px
@@ -555,6 +555,37 @@ footer
             border: none
             .bi-send-check
                 font-size: 2.2rem
+
+.footerMenu
+    font-family: $secundary-text
+    font-weight: 300
+    text-decoration: none
+    a
+        color: $gris
+        text-decoration: none
+        padding-bottom: 10px
+        display: inline-block
+        transition: color 0.5s ease-in-out, border-bottom 0.5s ease-in-out
+        border-bottom: 1px solid transparent
+        position: relative
+        &::after
+            content: attr(data-hover)
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            color: $rosa
+            clip-path: inset(0 100% 0 0) // Inicia el texto oculto por la derecha
+            transition: clip-path 0.5s ease-in-out
+            border-bottom: 1px solid $rosa
+            &:hover
+                color: $rosa
+                &::after
+                    clip-path: inset(0 0 0 0)
+
+
+
 @import _animacion
 
 @import _gallery
