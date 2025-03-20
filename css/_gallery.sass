@@ -1,0 +1,98 @@
+.text-primary-emphasis
+    color: $rosa
+    font-family: $main-text
+    font-weight: 300
+    text-transform: uppercase
+    font-size: $galeria-h2
+.wrapper
+    width: 90%
+    display: flex
+    max-width: 1320px
+    justify-content: center
+    margin-top: 30px
+    margin: 0 auto
+    @media (max-width: 991px)
+        width: 100%
+aside
+    width: 10%
+    color: $negro
+    text-transform: uppercase
+    writing-mode: vertical-lr
+    text-orientation: upright
+    display: flex
+    justify-content: flex-end
+    position: fixed
+    z-index: 10000
+    top: 0
+    left: 0
+    bottom: 50px
+    @media  ( max-width: 991px )
+        display: none
+    h1
+        font-size: 1.75rem
+        font-weight: 400
+        color: $negro
+.grid-galeria
+    width: 100%
+    max-width: 1440px
+    color: $negro
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr ))
+    grid-auto-rows: 280px
+    grid-auto-flow: dense
+    grid-gap: 15px
+    // @media ( max-width: 991px )
+    //     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr ))
+    //     grid-auto-rows: 300px
+    .grid-item
+        position: relative
+        background-color: $blanco
+        overflow: hidden
+        border-radius: 25px
+        a
+            cursor: zoom-in
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1)
+            aspect-ratio: 1 / 1
+            border-radius: 25px
+        // &::before
+        //     content: ''
+        //     position: absolute
+        //     top: 0
+        //     left: 0
+        //     width: 100%
+        //     height: 100%
+        //     background: rgba(0, 0, 0, 0.5)
+        //     transition: opacity 0.3s ease-in-out
+        //     z-index: 1
+        // &:hover
+        //     &::before
+        //         opacity: 0 // Eliminar la capa oscura
+    .grid-item img
+        &:hover
+            transform: scale(1.1)
+            transition: .3s all ease-in-out
+            border-radius: 25px
+            background-color: rgba(0, 0, 0, 0.5) 
+            
+    .grid-item
+        &:nth-child(2n + 2)
+            grid-column: span 1
+            grid-row: span 2
+        &:nth-child(6n - 2)
+            grid-column: span 2
+            grid-row: span 2
+        &:nth-child(18)
+            grid-column: 2 / 4
+            grid-row: 7 / 10
+                
+        @media ( max-width: 768px )
+            &:nth-child(2n + 2)
+                grid-column: unset
+                grid-row: unset
+            &:nth-child(6n - 2)
+                grid-column: unset
+                grid-row: unset               

@@ -1,0 +1,562 @@
+/*
+    Theme Name: Cosmia - Luciana Salomón
+    Theme URI: https://agilardino.github.io/cosmia
+    Author: Alejandro Gilardino Montoya
+    Author URI: https://github.com/agilardino
+/*
+@import url("https://use.typekit.net/qht2faf.css")
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+$blanco: #fff
+$rosa: #d60029
+$rojo: #c40d31
+$gris: #606060
+$font-size: 1.6rem
+$titulos: 5rem
+$main-text: "Work Sans", sans-serif
+$negro: #000
+$input-color: $negro
+$input-group-addon-color: $input-color
+$seccion-width: 100%
+$galeria-h2: clamp(4rem, 5vw, 6rem)
+$secundary-text: "Montserrat", serif
+$texto-final: "futura-pt", sans-serif
+
+*
+    box-sizing: border-box
+    position: relative
+    min-width: 0
+
+html
+    font-size: 62.5% //*/ 10px */
+    overflow: auto
+
+body
+    font-size: $font-size
+    font-family: $secundary-text
+    color: $blanco
+    scroll-behavior: smooth
+    overflow-x: hidden
+
+h1, h2, h3, h4
+    text-wrap: balance
+p
+    text-wrap: pretty
+
+.owl-carousel
+    img
+        aspect-ratio: 3 / 4
+        object-position: center
+        object-fit: cover
+.owl-carousel .owl-stage-outer
+    height: 100%
+
+.logo_principal
+    animation-name: aparicion
+    animation-duration: 1s
+    animation-delay: 0.1s
+    animation-fill-mode: forwards
+    max-width: 450px
+    max-height: 300px
+    @media ( max-width: 576px )
+        max-width: 200px
+        max-height: 320px
+
+.whatsapp
+    z-index: 999
+    position: fixed
+    width: 60px
+    height: 60px
+    bottom: 30px
+    right: 30px
+    padding: 10px 5px
+    text-align: center
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25)
+    border-radius: 100%
+    background: #0df053
+    .bi
+        color: $blanco
+        font-size: clamp(3rem, 2vw, 3.3rem)
+        padding: 10px
+        &:hover
+            color: #0df053
+    &:hover
+        background: $blanco
+.chevron
+    animation: vermas .5s alternate infinite ease-in-out
+    z-index: 1000
+    position: fixed
+    bottom: 5px
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 3rem
+    font-family: $main-text
+    .bi
+        color: $blanco
+        font-size: 4rem
+.pulse
+    animation: pulse-animation 2s infinite
+
+
+@import _navegacion
+
+.container-lg
+    max-width: 1200px
+.container-md
+    max-width: 960px
+
+.header
+    height: 90px
+    width: 100%
+    // display: flex
+    // justify-content: space-between
+    // align-items: center
+    z-index: 1200
+    //background-color: #fff
+    margin: 0 auto
+.logo
+    width: 200px
+    padding: 1.5rem 1rem
+
+.principal
+    width: $seccion-width
+    background-color: rgba(0 0 0 / 0)
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: 1fr 90px 60px
+    height: 85dvh
+    text-decoration: none
+    color: $blanco
+    position: relative
+    @media (max-width: 768px )
+        height: 100dvh
+    .video-background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: calc( 100% - 60px )
+        overflow: hidden
+        z-index: -1
+        .video-wrap
+            position: relative
+            width: 100%
+            height: 100%
+            .video
+                position: absolute
+                top: 50%
+                left: 50%
+                width: 100%
+                height: 100%
+                transform: translate(-50%, -50%)
+                // video
+                //     width: 100%
+                //     height: 100%
+                //     object-fit: cover
+                iframe
+                    // width: 100%
+                    // height: 100%
+                    border: none
+                    width: 100vw
+                    height: 56.25vw
+                    min-height: 100vh
+                    min-width: 184.77vh
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+
+    .logo
+        grid-column: 2 / -1
+        grid-row: 1 / 2
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding-inline: 50px
+        z-index: 1
+        @media ( max-width: 991px )
+            grid-column: 1 / -1
+            padding-inline: 0
+            text-align: center
+            align-items: center
+            justify-content: center
+    .tagline
+        z-index: 1
+        grid-column: 1 / -1
+        grid-row: 2 / 3
+        border-block: 1px solid $blanco
+        text-align: center
+        background-color: rgba(0,0,0,0.5 )
+        animation-name: titulos
+        animation-duration: 1s
+        animation-delay: 0.5s
+        display: flex
+        justify-content: center
+        align-items: center
+        animation-fill-mode: forwards
+        text-transform: uppercase
+        h2
+            font-size: clamp(1.90rem, 2.25vw, 3rem)
+            font-family: $secundary-text
+            font-weight: 100
+            //padding: 3rem 0
+    .cta-cosmia
+        grid-column: 1 / -1
+        grid-row: 3 / -1
+        font-family: $secundary-text
+        font-weight: 200
+        text-transform: uppercase
+        background-color: rgba(0,0,0, 1 )
+        font-size: clamp(2rem, 2.25vw, 2.5rem)
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $blanco
+        text-decoration: none
+        z-index: 2
+        &:hover
+            background-color: $rosa
+            transition: .5s ease-in-out
+        .bi
+            color: $rojo
+            font-size: 2.3rem
+            padding-right: 1rem
+            &:hover
+                background-color: $rosa
+    a
+        color: $blanco
+        text-decoration: none
+        display: block
+        padding-block: 1.25rem
+        &:hover
+            color: $blanco
+            background-color: $rosa
+            .bi
+                color: $blanco
+
+#make-up
+    height: 100dvh
+    width: $seccion-width
+    background-color: $negro
+    background-image: url(../img/bg_2.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    display: flex
+    justify-content: center
+    align-content: center
+    align-items: center
+    .texto-principal
+        text-align: left
+        padding-left: 100px
+        h2
+            font-size: clamp(5rem, calc(15vw - 1rem), 21rem)
+            text-transform: uppercase
+            font-weight: 100
+            line-height: .75
+        span
+            color: $rosa
+    @media ( max-width: 991px )
+        height: 85dvh
+        padding: 0
+
+.carousel-item
+    transition: transform 3.5s ease-in-out
+.carousel-fade .active.carousel-item-start,
+.carousel-fade .active.carousel-item-end
+    transition: opacity 0.8s 1.3s
+
+.cosmia-contacto
+    background-color: $negro
+    width: $seccion-width
+    text-decoration: none
+    a
+        text-decoration: none
+    .container-fluid
+        border-block: 1px solid $rosa
+        cursor: pointer
+        transition: .5s ease-in-out
+        a
+            text-decoration: none
+            color: $blanco
+        &:hover
+            background-color: $rosa
+            .bi
+                color: $blanco
+    div:nth-child(2)
+        border: none
+    .cosmia-estudio, .cosmia-salon, .cosmia-school
+        padding-block: 2rem
+        cursor: pointer
+        transition: .5s ease-in-out
+        h3
+            font-size: clamp(2rem, 2.5vw, 3rem)
+            text-transform: uppercase
+            font-weight: 200
+            color: $blanco
+            text-decoration: none
+        .bi
+            color: $rosa
+            margin-inline: 1rem
+
+#agendar
+    height: 100dvh
+    width: $seccion-width
+    background-image: url(../img/bg_3_luciana_cita.png)
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    @media ( max-width: 768px )
+        background-position: center right
+        
+    .citas
+        height: 100dvh
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        flex-direction: column
+        align-content: flex-start
+        text-align: left
+        h1
+            font-size: clamp(5rem, 5.5vw, 6rem)
+            font-family: $main-text
+            font-weight: 100
+            text-transform: uppercase
+            padding-left: 1rem
+            width: 10ch
+        h2
+            padding-left: 1rem
+        .bi-plus-lg
+            font-size: clamp(6rem, 8vw, 8rem)
+            color: $rojo
+            text-align: center
+        @media (max-width: 991px)
+            padding-left: 3rem
+            h1
+                font-weight: 400
+                padding-left: 1rem
+            h2
+                padding-left: 1rem
+
+    .agenda
+        width: 310px
+        text-transform: uppercase
+        font-size: clamp(3rem, 4vw, 5rem)
+        font-family: $main-text
+        font-weight: 300
+        text-justify: justify
+        @media (max-width: 991px)
+            width: 15ch
+            font-weight: 400
+            font-kerning: 2rem
+#video-section
+    background: url(../img/bg-video.png) no-repeat center center
+    height: 600px
+    background-size: cover
+    display: flex
+    width: $seccion-width
+    justify-content: center
+    align-items: center
+    color: $blanco
+    .button
+        font-size: clamp(3rem, calc( 5vw - 1rem ), 7.33rem)
+        font-weight: 100
+        color: $blanco
+        text-decoration: none
+        background: none
+        border: none
+        padding: 1rem
+        display: block
+        transition: .5s ease-in-out
+        &:hover
+            color: $rosa
+            font-weight: 300
+            transition: .5s ease-in-out
+    @media  ( max-width: 768px )
+        height: 40dvh
+
+.modal-content
+    background-color: rgba(0 0 0 / 0)    
+    border: none
+    button
+        border: none
+        background: none
+        display: block
+        .bi
+            color: $blanco
+            font-size: 3rem
+            font-weight: 400
+            display: block
+            &:hover
+                color: $rosa
+                font-weight: 400
+
+#testimonio
+    padding-block: clamp(1.5rem, 3.5vw, 5rem)
+    width: $seccion-width
+    background-color: rgba(0, 0, 0, 1)
+    display: flex
+    justify-content: space-between
+    //@media (max-width: 768px)
+     //   padding-block: 1.5rem
+    .texto-testimonio
+        font-family: $main-text
+        font-size: clamp(1.75rem, 1.5vw, 2rem)
+        font-weight: 100
+        max-width: 55ch
+        line-height: 2em
+        margin: 0 auto
+        @media  ( max-width: 768px  )
+            font-weight: 200
+            span
+                display: none
+
+    .menu_links
+        margin-block: 5rem
+        @media  ( max-width: 768px )
+            margin-block: 4rem
+        ul
+            font-family: $main-text
+            text-transform: uppercase
+            list-style: none
+            display: flex
+            justify-content: space-between
+            li
+                padding-block: 2rem
+                text-decoration: underline
+                font-size: clamp(3rem, 4vw, 4.5rem)
+                font-weight: 300
+                color: $blanco
+                span
+                    color: $rojo
+                    text-decoration: underline
+                    font-size: clamp(3rem, 4vw, 4.5rem)
+                    font-weight: 400
+        @media (max-width: 768px)
+            ul
+                flex-direction: column
+                align-items: center
+                li
+                    padding-block: 1rem
+    .redes-sociales
+        margin-block: 5rem
+        @media  ( max-width: 768px )
+            margin-block: 3rem
+        ul
+            font-family: $main-text
+            text-transform: uppercase
+            list-style: none
+            display: flex
+            justify-content: center
+            gap: 2rem
+            li
+                padding: 2rem
+                text-decoration: none
+                font-size: clamp(1.85rem, 2.2vw, 2.75rem)
+                font-weight: 300
+                color: $blanco
+                a
+                    color: $blanco
+                    text-decoration: none
+                    padding-bottom: 10px
+                    display: inline-block
+                    transition: color 0.5s ease-in-out, border-bottom 0.5s ease-in-out
+                    border-bottom: 1px solid transparent
+                    position: relative
+                    &::after
+                        content: attr(data-hover)
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: 100%
+                        color: $rosa
+                        clip-path: inset(0 100% 0 0) // Inicia el texto oculto por la derecha
+                        transition: clip-path 0.5s ease-in-out
+                        border-bottom: 1px solid $rosa
+                    &:hover
+                        color: $rosa
+                        &::after
+                            clip-path: inset(0 0 0 0)
+                        
+        @media (max-width: 768px)
+            ul
+                flex-direction: column
+                align-items: center
+                li
+                    padding-block: 0.75rem
+    .info-contacto
+        margin-bottom: 5rem
+        p
+            font-family: $main-text
+            font-size: clamp(1.75rem, 2vw, 2rem)
+            line-height: 1.2
+            color: $blanco
+            text-transform: uppercase
+            font-weight: 300
+            display: block
+.face-off
+    display: none
+    @media (max-width: 768px)
+        display: flex
+        img
+            width: 100%
+            object-fit: cover
+
+// ESTILOS DE LAS PAGINAS INTERNAS
+@import _cosmiastudio
+@import _modal
+
+/*** FOOTER ESTILOS ***/
+footer
+    width: $seccion-width
+    padding-block: 5rem
+    background: $blanco
+    img
+        width: 280px
+    .iconos-rrss
+        color: $gris
+        ul
+            font-family: $main-text
+            text-transform: uppercase
+            list-style: none
+            display: flex
+            justify-content: center
+            gap: 2rem
+            li
+                padding: 2rem
+                text-decoration: underline
+                font-size: clamp(3rem, 4vw, 3.5rem)
+                font-weight: 300
+                a
+                    color: $gris
+                    &:hover
+                        color: $rosa
+
+    .input-group
+        height: 50px
+        width: max(30%)
+        @media (max-width: 991px)
+            width: calc( $seccion-width / 2 )
+        @media (max-width: 768px)
+            width: $seccion-width
+        input[type="email"]
+            font-size: 1.75rem
+            font-family: $main-text
+            font-weight: 400
+            background-color: $negro
+            color: $blanco
+            border: none
+            padding: 1rem
+            &::placeholder
+                color: $gris !important
+        button
+            width: 45px
+            border: none
+            .bi-send-check
+                font-size: 2.2rem
+@import _animacion
+
+@import _gallery
+
+@import _spa

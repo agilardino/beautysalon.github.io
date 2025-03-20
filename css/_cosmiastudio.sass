@@ -1,0 +1,275 @@
+#acerca
+    width: $seccion-width
+    background-color: $negro
+    height: calc(80dvh - 150px)
+    text-transform: uppercase
+    display: flex
+    color: $blanco
+    position: relative
+    overflow: hidden
+    @media ( max-width: 768px )
+        height: 88dvh
+    // video
+    //     filter: grayscale(95%)
+    //     object-fit: cover
+    #background-video
+        position: absolute
+        z-index: -1
+        pointer-events: none
+        object-fit: cover
+        border: none
+        width: 100vw
+        height: 56.25vw
+        min-height: 100vh
+        min-width: 184.77vh
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    .__acerca-contenido
+        display: flex
+        flex-direction: column
+        justify-content: center
+        position: relative
+        z-index: 1
+    .sub-heading
+        h2
+            font-size: clamp(2rem, calc(5vw + 2rem), 3rem)
+            font-family: $secundary-text
+            font-weight: 200
+            margin: 0 auto
+            padding: 0px 0.8rem
+            animation-name: ingresoderecha
+            animation-duration: 1s
+            animation-delay: 0.3s
+            animation-fill-mode: forwards
+            opacity: 0
+    .main-heading
+        h1
+            padding: 0
+            margin: 0
+            font-size: clamp(7rem, calc(8vw + 1rem), 12rem)
+            line-height: 0.95
+            font-weight: 600
+            animation-name: ingresoderecha
+            animation-duration: 1s
+            animation-delay: 0.3s
+            animation-fill-mode: forwards
+            opacity: 0
+            font-family: $texto-final
+
+#trabajos
+    width: $seccion-width
+    padding-block: 3rem
+    background-color: $negro
+    color: $blanco
+    .descripcion
+        font-family: $main-text
+        font-size: clamp(1.5rem, 1.45vw, 1.5rem)
+        line-height: 1.65
+        font-weight: 400
+        padding-right: 8rem
+        p
+            &:nth-child(1)
+                padding-top: clamp(1.15rem, 1.45vw, 1.5rem)
+                font-size: clamp(1.75rem, 1.85vw, 2rem)
+                line-height: 1.5
+                text-wrap: pretty
+        @media ( max-width: 768px )
+            padding-right: 0
+figure
+    margin: 0 0 1rem
+    padding-bottom: 4.3rem
+    @media (max-width: 768px )
+        margin: 0 0 0
+        padding-block: 3rem 
+        padding-inline: 1.5rem
+
+#__contenido-secundario
+    padding-block: clamp(1rem, 4vw, 5rem)
+    p
+        color: $gris
+        padding-block: 3rem
+        line-height: 2
+    .agendador
+        h2
+            color: $rosa
+            text-transform: uppercase
+            font-size: clamp(6rem, 7vw, 9rem)
+            font-weight: 600
+            line-height: 0.70
+            margin-top: 1rem
+            span
+                font-weight: 200
+                font-size: clamp(2rem, 3vw, 4rem)
+                font-family: $secundary-text
+        p
+            text-transform: uppercase
+            font-size: clamp(2.8rem, 2.5vw, 2.75rem)
+            margin-top: -2.8rem
+            color: $negro
+            font-weight: 400
+    .cambio-rojo
+        height: 120px
+        filter: invert(14%) sepia(51%) saturate(7428%) hue-rotate(358deg) brightness(82%) contrast(118%)
+    .bloquote
+        position: absolute
+        right: 0
+        z-index: 1
+        top: 15px
+        background-color: $rojo
+        p
+            color: $blanco
+            padding: 3rem
+            &:nth-child(1)
+                font-size: 1.5rem
+                line-height: 1.5
+                padding: 5rem 3rem 0
+                @media ( max-width: 991px )
+                    padding: clamp(1.5rem, 3vw, 4rem)
+            &:nth-child(2)
+                font-size: clamp(1.75rem, 1.9vw, 2rem)
+                line-height: 1.2
+                padding: 1rem 1.5rem
+                @media ( max-width: 991px )
+                    padding: clamp(1rem, 3vw, 4rem)
+        @media ( max-width: 991px )
+            position: relative
+            z-index: auto
+            top: auto
+            margin-bottom: 1rem
+            p
+                padding: 0
+                font-size: 1.33rem
+    figcaption
+        padding-inline: 6rem
+        align-items: center
+        h5
+            font-size: 2rem
+            font-weight: 400
+        img
+            width: 45%
+        @media ( max-width: 991px )
+            margin-bottom: calc(2rem - 10px)
+            align-items: center
+            padding-inline: clamp(1.3rem, 3vw, 4rem)
+            img
+                width: 150px
+
+    .descripcion
+        font-size: 1.5rem
+        max-width: 85ch
+        line-height: 1.5
+
+.gallery
+    h2
+        font-size: $galeria-h2
+        font-family: $main-text
+        font-weight: 400
+    img
+        object-fit: cover
+        aspect-ratio: 16 / 9
+    .overlay
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        width: $seccion-width
+        height: 100%
+        top: 50%
+        left: 50%
+        opacity: 0
+        transform: translate(-50%, -50%)
+        text-align: center
+        transition: all 0.35s ease-in-out
+    .galeria
+        position: relative
+        &:hover
+            img
+                opacity: 0.85
+            .overlay
+                opacity: 0.75
+                background-color: rgba(0,0,0,1)
+    .margenes
+        margin-bottom: 3.75rem
+    p
+        font-size: 3rem
+        color: $rojo
+        text-transform: uppercase
+        padding-block: 2.5rem
+        font-weight: 300
+    @media ( max-width: 768px )
+        span
+            visibility: hidden
+        .margenes
+            margin-bottom: 0
+
+figcaption
+    img
+        padding-left: 10rem
+
+
+#contacto
+    background-color: $negro
+    padding-block: 1.5rem
+    @media ( max-width: 768px )
+        padding-block: 0
+    .redes-sociales
+        padding-block: .5rem
+        @media  ( max-width: 768px )
+            padding-block: 2rem
+            margin-block: 1.5rem
+        ul
+            font-family: $main-text
+            text-transform: uppercase
+            list-style: none
+            display: flex
+            justify-content: center
+            gap: 2rem
+            li
+                padding: 2rem
+                text-decoration: none
+                font-size: clamp(1.85rem, 2.2vw, 2.75rem)
+                font-weight: 300
+                color: $blanco
+                a
+                    color: $blanco
+                    text-decoration: none
+                    padding-bottom: 10px
+                    display: inline-block
+                    transition: color 0.5s ease-in-out, border-bottom 0.5s ease-in-out
+                    border-bottom: 1px solid transparent
+                    position: relative
+                    &::after
+                        content: attr(data-hover)
+                        position: absolute
+                        left: 0
+                        top: 0
+                        width: 100%
+                        height: 100%
+                        color: $rosa
+                        clip-path: inset(0 100% 0 0) // Inicia el texto oculto por la derecha
+                        transition: clip-path 0.5s ease-in-out
+                        border-bottom: 1px solid $rosa
+                    &:hover
+                        color: $rosa
+                        &::after
+                            clip-path: inset(0 0 0 0)
+                        
+        @media (max-width: 768px)
+            ul
+                flex-direction: column
+                align-items: center
+                li
+                    padding-block: 0.75rem
+    .info-contacto
+        padding: 5rem 1rem
+        p
+            font-family: $main-text
+            font-size: clamp(1.75rem, 2.5vw, 2.5rem)
+            line-height: 1.2
+            color: $blanco
+            text-transform: uppercase
+            font-weight: 300
+#bio
+    margin-top: 4rem
+    margin-bottom: 12rem

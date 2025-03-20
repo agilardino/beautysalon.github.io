@@ -1,0 +1,85 @@
+header
+    height: 90px
+    width: 100%
+    // display: flex
+    // justify-content: space-between
+    // align-items: center
+    z-index: 1200
+    //background-color: #fff
+    margin: 0 auto
+    position: relative
+    transition: all 0.3s ease
+header.scrolled
+    position: fixed
+    top: 0
+    background-color: rgba(256 256 256 / 0.85 )
+    height: 79px
+    box-shadow: 0 2px 5px rgba(0 0 0 / 0.5)
+
+.logo
+    width: 200px
+    padding: 1.5rem 1rem
+    transition: all .3s ease-in-out
+header.scrolled .logo
+    width: 180px
+    padding: 1.15rem 0.9rem
+    transition: all .3s ease-in-out
+header.scrolled .navbar-toggler
+    transform: scale(0.9)
+    transition: all .3s ease-in-out
+
+
+#toggler-icon
+     transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+#toggler-icon.plus-to-x
+    transition: transform 0.3s ease-in-out
+#toggler-icon.x-to-plus
+    transform: rotate(0deg)
+
+.navbar, .navbar-brand
+    padding-block: 0
+
+.offcanvas
+    background-color: #000
+    height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: right
+.navbar-collapse .nav-link
+    font-size: 3.5em
+    letter-spacing: 2px
+.navbar-toggler
+  color: $rosa
+  font-size: clamp(6rem, 7vw, 8rem)
+  border: none
+  z-index: 2990
+  padding: 0
+  transition: all .3s ease-in-out
+.navbar-toggler:focus 
+  box-shadow: none
+
+.offcanvas.offcanvas-end
+    width: 50vw
+    @media screen and ( max-width: 768px )
+        width: 100%
+
+.navbar-nav
+    padding-top: 60px
+    &:nth-child(1)
+        padding-block: 20rem
+    .nav-item
+        font-size: 2.5rem
+        display: block
+        padding-block: .75rem
+        text-transform: uppercase
+        width: 20ch
+    .nav-link
+        color: $blanco
+        font-weight: 300
+        &:hover
+            color: $rosa
+            transition: .2.5s ease-in-out
+            &::before
+                content: "+ "
+                color: $rosa
