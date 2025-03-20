@@ -1258,14 +1258,14 @@ footer .input-group button .bi-send-check {
   transition: all 0.3s ease-in-out;
 }
 .footerMenu::before, .footerMenu ::after {
-  content: " ";
+  content: "";
   position: absolute;
   width: 0px;
   height: 2px;
-  background-color: #d60029;
-  bottom: 0px;
-  top: 25px;
+  background-color: #606060;
+  bottom: -10px;
   left: 50%;
+  right: 50%;
   transition: all 0.3s ease-in-out;
 }
 .footerMenu::before {
@@ -1281,8 +1281,13 @@ footer .input-group button .bi-send-check {
   transform: translateX(0);
 }
 .footerMenu:hover {
-  color: #d60029;
+  color: #606060;
   font-weight: 400;
+  text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25);
+}
+.footerMenu a {
+  display: block;
+  padding: 1em;
 }
 
 @keyframes aparicion {

@@ -564,14 +564,14 @@ footer
     position: relative
     transition: all .3s ease-in-out
     &::before, ::after
-        content: " "
+        content: ""
         position: absolute
         width: 0px
         height: 2px
-        background-color: $rosa
-        bottom: 0px
-        top: 25px
+        background-color: $gris
+        bottom: -10px
         left: 50%
+        right: 50%
         transition: all .3s ease-in-out
     &::before
         transform: translateX(-50%)
@@ -583,8 +583,12 @@ footer
         right: 0
         transform: translateX(0)
     &:hover
-        color: $rosa
+        color: $gris
         font-weight: 400
+        text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.25)
+    a
+        display: block
+        padding: 1em
         
         
 
