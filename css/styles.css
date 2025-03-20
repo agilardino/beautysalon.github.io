@@ -1260,10 +1260,11 @@ footer .input-group button .bi-send-check {
 .footerMenu::before, .footerMenu ::after {
   content: " ";
   position: absolute;
-  width: 0;
-  height: 1px;
+  width: 0px;
+  height: 2px;
   background-color: #d60029;
   bottom: 0px;
+  top: 25px;
   left: 50%;
   transition: all 0.3s ease-in-out;
 }
@@ -1281,6 +1282,7 @@ footer .input-group button .bi-send-check {
 }
 .footerMenu:hover {
   color: #d60029;
+  font-weight: 400;
 }
 
 @keyframes aparicion {
