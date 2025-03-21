@@ -216,14 +216,6 @@ header.scrolled .navbar-toggler {
   color: #d60029;
 }
 
-.container-lg {
-  max-width: 1200px;
-}
-
-.container-md {
-  max-width: 960px;
-}
-
 .header {
   height: 90px;
   width: 100%;
