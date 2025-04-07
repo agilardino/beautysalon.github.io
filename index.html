@@ -332,29 +332,29 @@ nav.navbar > .container-fluid {
         $("#videoCosmia").on('hidden.bs.modal', function (e) {
         $("#videoCosmia iframe").attr("src", $("#videoCosmia iframe").attr("src"));
         });
+    
+    // script para mostrar el navbar
 
-        $(document).scroll(function(){
-  var y = $(this).scrollTop();
-  if (y>450){
-    // $(".header").hide();
-    $(".navbar-brand").removeClass("invisible");
-  }else {
-    // $(".header").show();
-    $(".navbar-brand").addClass("invisible");
-  }
-});
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 450) {
+                // $(".header").hide();
+                $(".navbar-brand").removeClass("invisible");
+            }else {
+                // $(".header").show();
+                $(".navbar-brand").addClass("invisible");
+            }
+        });
 
-$(document).scroll(function() {
-    var y = $(this).scrollTop();
-    if (y > 450) {
-        $("nav.navbar > div.container-fluid").removeClass("container-fluid").addClass("container");
-    } else {
-        $("nav.navbar > div.container").removeClass("container").addClass("container-fluid");
-    }
-});
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+            if (y > 450) {
+                $("nav.navbar > div.container-fluid").removeClass("container-fluid").addClass("container");
+            } else {
+                $("nav.navbar > div.container").removeClass("container").addClass("container-fluid");
+            }       
+        });
 
-    </script>
-    <script>
         AOS.init();
     </script>
 </body>
