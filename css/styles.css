@@ -95,9 +95,14 @@ p {
   font-size: 3rem;
   font-family: "Work Sans", sans-serif;
 }
+@media (max-width: 991px) {
+  .chevron {
+    left: 45%;
+  }
+}
 .chevron .bi {
   color: #fff;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .pulse {
