@@ -346,14 +346,14 @@ nav.navbar > .container-fluid {
             }
         });
 
-        $(document).scroll(function() {
-            var y = $(this).scrollTop();
-            if (y > 450) {
-                $("nav.navbar > div.container-fluid").removeClass("container-fluid").addClass("container");
-            } else {
-                $("nav.navbar > div.container").removeClass("container").addClass("container-fluid");
-            }       
-        });
+        // $(document).scroll(function() {
+        //     var y = $(this).scrollTop();
+        //     if (y > 450) {
+        //         $("nav.navbar > div.container-fluid").removeClass("container-fluid").addClass("container");
+        //     } else {
+        //         $("nav.navbar > div.container").removeClass("container").addClass("container-fluid");
+        //     }       
+        // });
 
         AOS.init();
     </script>
